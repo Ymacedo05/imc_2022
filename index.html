@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title></title>
+        
+        <style>
+            
+            *{
+                padding: 0px;
+                margin: 0px;
+                list-style: none;
+                text-decoration: none;
+                outline: none;
+                background-color: #F0F0F0;
+            }
+            :root{
+                --cor1:#364F6B;
+                --cor2:#43DDE6;
+                --cor3:pink;
+                --cor4:teal;
+
+            }
+            #container{
+                border: 1px solid black;
+                height: 700px;
+                max-width: 700px;
+                box-sizing: border-box;
+                padding: 10px 10px 30px 10px;
+                margin: 15px auto;
+                box-shadow: 4px 4px 5px 3px gray;
+                border-radius: 20px;
+                border-top: 10px solid #364F6B;
+                border-bottom: 10px solid #364F6B;
+                background: #F0F0F0 ;
+            }
+            
+            #container h1{
+                border-left: 7px solid var(--cor1);
+                padding: 5px;
+                margin-top: 10%;
+                
+                color: var(--cor1);
+            }
+            
+            .mini {
+                
+                display: flex;
+                margin-top: 10%;
+                justify-content: center;
+                
+            }
+            
+            .mini .slot{
+                height: 200px;
+                width: 180px;
+                text-align: center;
+                line-height: 170px;
+                font-size: 2em;
+                font-weight: bold;
+                
+                margin: 12px;
+                border-radius: 20px;
+            }
+            
+            .slot:hover{
+                box-shadow: 7px 7px 10px gray;
+                 padding: 5px;
+                 transition-duration: 1s;
+            }
+            
+            .slot1{
+                background: black;
+                color: white;
+            }
+            .slot2{
+                background: var(--cor3);
+                color: white;
+            }
+            #slot1k{
+                box-shadow: 7px 7px 10px teal;
+                color: teal;
+                padding: 5px;
+                transition-duration: 1.2s
+               
+            }
+            #slot2k{
+                box-shadow: 7px 7px 10px rgb(253, 211, 218);
+                color: white;
+                padding: 5px;
+                transition-duration: 1.2s
+               
+            }
+            
+            button{
+                display: block;
+                width: 200px;
+                padding: 10px;
+                border-radius: 30px;
+                font-size: 1.3em;
+                margin: 13% auto auto auto;
+                border: 4px solid #F0F0F0;
+                background: white;
+                font-weight: bolder;
+                color: rgb(189, 188, 188);
+            }
+            
+            button.btn2{
+                border: 4px solid var(--cor4);
+                color: var(--cor4);
+                box-shadow: 0px 0px 20px var(--cor4) ;
+                transition-duration: 2s;
+                
+            }
+            
+            button.btn3{
+                border: 4px solid var(--cor3);
+                color: var(--cor3);
+                box-shadow: 0px 0px 20px var(--cor3) ;
+                transition-duration: 2s;
+            }
+        </style>
+        
+    </head>
+    <body>
+        
+        <div id="container">
+            
+            <h1>Quem está utilizando:</h1>
+            <div class="mini">
+                <div class="slot slot1" onclick="click1()" id="slot1">
+                    Ele
+                </div>
+                    
+                <div class="slot slot2" onclick="click2()" id="slot2">
+                    Ela
+                </div>
+            </div>
+            <button type="submit" id="btn">Iniciar</button>
+        </div>
+        
+        <script>
+            var integra = document.getElementById("btn")
+
+            var integra02 = document.getElementById("slot1")
+
+            var integra03 = document.getElementById("slot2")
+
+
+
+            function click1(){
+                
+                /*Inclusão de classe com estilos pré determinados*/
+                integra.setAttribute("class","btn2")
+
+                /*Inclusão de id com estilos pré determinados*/
+                integra02.setAttribute("id","slot1k")
+
+
+                /*reversão do id do outro botão para perder os efeitos de selecionado*/
+                integra03.setAttribute("id","slot2kk")
+                
+            }
+            
+            function click2(){
+               
+                /*Inclusão de classe com estilos pré determinados*/
+                integra.setAttribute("class","btn3")
+
+               /*Inclusão de id com estilos pré determinados*/
+                integra03.setAttribute("id","slot2k")
+
+                /*reversão do id do outro botão para perder os efeitos de selecionado*/
+                integra02.setAttribute("id","slot1kk")
+            }
+        </script>
+    </body>
+</html>
